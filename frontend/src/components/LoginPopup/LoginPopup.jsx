@@ -4,6 +4,7 @@ import { assets } from '../../assets/assets'
 import { StoreContext } from '../../Context/StoreContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { BACKEND_URL } from '../../../utils'
 
 const LoginPopup = ({ setShowLogin }) => {
 
@@ -27,10 +28,10 @@ const LoginPopup = ({ setShowLogin }) => {
 
         let new_url = url;
         if (currState === "Login") {
-            new_url += "/api/user/login";
+            BACKEND_URL+ "/api/user/login";
         }
         else {
-            new_url += "/api/user/register"
+            BACKEND_URL += "/api/user/register"
         }
         const response = await axios.post(new_url, data);
         if (response.data.success) {
