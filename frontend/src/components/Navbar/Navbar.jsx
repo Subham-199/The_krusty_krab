@@ -19,8 +19,7 @@ const Navbar = ({ setShowLogin}) => {
 
 
   return (
-    <d
-    iv className='navbar'>
+    <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
       <ul className="navbar-menu">
         <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
@@ -50,7 +49,7 @@ const Navbar = ({ setShowLogin}) => {
         }
 
       </div>
-    </div>
+     </div> 
   )
 }
 
