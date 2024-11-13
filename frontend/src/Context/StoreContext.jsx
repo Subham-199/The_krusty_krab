@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { food_list, menu_list } from "../assets/assets";
 import axios from "axios";
-import { BACKEND_URL } from '../../../utils'; 
+import { BACKEND_URL } from "../../utils"; // Import BACKEND_URL
 
 export const StoreContext = createContext(null);
 
@@ -67,7 +67,7 @@ const StoreContextProvider = (props) => {
     }, []);
 
     const contextValue = {
-        BACKEND_URL,
+        BACKEND_URL, // Provide BACKEND_URL in the context
         food_list,
         menu_list,
         cartItems,
@@ -79,7 +79,7 @@ const StoreContextProvider = (props) => {
         loadCartData,
         setCartItems,
         currency,
-        deliveryCharge
+        deliveryCharge,
     };
 
     return (
