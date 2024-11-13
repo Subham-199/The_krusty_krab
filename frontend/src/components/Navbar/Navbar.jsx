@@ -19,7 +19,8 @@ const Navbar = ({ setShowLogin}) => {
 
 
   return (
-    <div className='navbar'>
+    <d
+    iv className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="" /></Link>
       <ul className="navbar-menu">
         <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>home</Link>
